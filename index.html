@@ -470,34 +470,41 @@
                     <button id="btnCopySeed" title="Copy Seed Code" class="px-3 py-2 rounded-xl bg-blue-600 text-white font-outfit font-extrabold text-xs">COPY</button>
                 </div>
             </div>
+
+            <!-- Primary Launch CTA Button -->
+            <button id="btnMainLaunch" class="w-full mt-3 py-3.5 rounded-2xl bg-gradient-to-b from-emerald-400 to-emerald-600 text-white font-outfit font-black text-sm tracking-wide btn-push-green">
+                <span id="btnMainLaunchText">PLAY NORMAL • LEVEL 1</span>
+            </button>
         </div>
 
-        <!-- Primary Launch Button -->
-        <button id="btnMainLaunch" class="w-full py-3.5 rounded-2xl bg-gradient-to-b from-emerald-400 to-emerald-600 text-white font-outfit font-black text-base tracking-wide btn-push-green flex items-center justify-center space-x-2">
-            <span>▶</span>
-            <span id="btnMainLaunchText">PLAY NORMAL • LEVEL 1</span>
-        </button>
-
-        <!-- Continuous Persistent Ad Slots (Slot A + Slot B) -->
+        <!-- Continuous Persistent Ad Slots (Slot A + Slot B — Natural Native Presentation, Zero "AD"/"SPONSOR" Labels) -->
         <div class="mt-2 space-y-1.5">
-            <div id="stickyAdBanner" class="theme-card rounded-2xl px-3 py-2 flex items-center justify-between text-[11px] shadow-sm">
-                <div class="flex items-center space-x-2 truncate">
-                    <span class="px-1.5 py-0.5 rounded bg-blue-500/15 text-blue-600 dark:text-sky-400 font-outfit font-black text-[9px]">AD</span>
-                    <span id="stickyBannerText" class="font-semibold truncate">Free Bonus Points Available!</span>
+            <div id="stickyAdBanner" class="theme-card rounded-2xl px-3 py-2 flex items-center justify-between text-[11px] shadow-sm overflow-hidden">
+                <div id="slot1LiveMount" class="flex-1 min-w-0 flex items-center justify-center overflow-hidden">
+                    <div class="w-full flex items-center justify-between">
+                        <div class="flex items-center space-x-2 truncate">
+                            <span class="w-2 h-2 rounded-full bg-blue-500 shrink-0"></span>
+                            <span id="stickyBannerText" class="font-semibold truncate">Free Bonus Points Available!</span>
+                        </div>
+                        <button id="btnBannerWatchAd" class="ml-2 shrink-0 px-2.5 py-1 rounded-lg bg-blue-600 text-white font-outfit font-extrabold text-[10px] active:scale-95">
+                            +30 PTS
+                        </button>
+                    </div>
                 </div>
-                <button id="btnBannerWatchAd" class="ml-2 shrink-0 px-2.5 py-1 rounded-lg bg-blue-600 text-white font-outfit font-extrabold text-[10px] active:scale-95">
-                    +30 PTS
-                </button>
             </div>
 
-            <div id="secondaryHomeAdSlot" class="theme-card rounded-2xl px-3 py-1.5 flex items-center justify-between text-[10px] shadow-sm">
-                <div class="flex items-center space-x-2 truncate">
-                    <span class="px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 font-outfit font-black text-[9px]">SPONSOR</span>
-                    <span id="secondaryHomeAdText" class="font-semibold opacity-80 truncate">Daily Boost Ready • Earn Extra Hints</span>
+            <div id="secondaryHomeAdSlot" class="theme-card rounded-2xl px-3 py-1.5 flex items-center justify-between text-[10px] shadow-sm overflow-hidden">
+                <div id="slot2LiveMount" class="flex-1 min-w-0 flex items-center justify-center overflow-hidden">
+                    <div class="w-full flex items-center justify-between">
+                        <div class="flex items-center space-x-2 truncate">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500 shrink-0"></span>
+                            <span id="secondaryHomeAdText" class="font-semibold opacity-85 truncate">Daily Boost Ready • Earn Extra Hints</span>
+                        </div>
+                        <button id="btnSecondaryHomeAd" class="ml-2 shrink-0 px-2 py-0.5 rounded-lg bg-emerald-600 text-white font-outfit font-extrabold text-[9px] active:scale-95">
+                            CLAIM
+                        </button>
+                    </div>
                 </div>
-                <button id="btnSecondaryHomeAd" class="ml-2 shrink-0 px-2 py-0.5 rounded-lg bg-emerald-600 text-white font-outfit font-extrabold text-[9px] active:scale-95">
-                    CLAIM
-                </button>
             </div>
         </div>
     </div>
@@ -584,18 +591,24 @@
                     <div class="opacity-70 font-bold">Complexity</div>
                 </div>
             </div>
-            <div id="intelSpecialTags" class="flex flex-wrap items-center justify-center gap-1.5 mt-1.5 font-bold opacity-80"></div>
+            <div id="intelSpecialTags" class="text-center font-outfit font-bold opacity-75 mt-1.5">
+                Standard Multi-Segment Vectors
+            </div>
         </div>
 
-        <!-- Game Top Persistent Ad Slot (Slot A) -->
-        <div id="gameTopAdSlot" class="w-full theme-card rounded-xl px-2.5 py-1 mb-1 flex items-center justify-between text-[10px]">
-            <div class="flex items-center space-x-1.5 truncate">
-                <span class="px-1.5 py-0.5 rounded bg-blue-500/15 text-blue-600 dark:text-sky-400 font-outfit font-black text-[8px]">AD</span>
-                <span id="gameTopAdText" class="font-semibold opacity-80 truncate">Need a boost? Watch a quick clip for +30 Pts</span>
+        <!-- Game Top Persistent Ad Slot (Slot A — Clean Native Frame) -->
+        <div id="gameTopAdSlot" class="w-full theme-card rounded-xl px-2.5 py-1 mb-1 flex items-center justify-between text-[10px] overflow-hidden">
+            <div id="gameSlot1LiveMount" class="flex-1 min-w-0 flex items-center justify-center overflow-hidden">
+                <div class="w-full flex items-center justify-between">
+                    <div class="flex items-center space-x-1.5 truncate">
+                        <span class="w-1.5 h-1.5 rounded-full bg-blue-500 shrink-0"></span>
+                        <span id="gameTopAdText" class="font-semibold opacity-85 truncate">Need a boost? Grab +30 Bonus Points</span>
+                    </div>
+                    <button id="btnGameTopAdAction" class="ml-2 shrink-0 px-2 py-0.5 rounded bg-blue-600 text-white font-outfit font-extrabold text-[9px] active:scale-95">
+                        +30 PTS
+                    </button>
+                </div>
             </div>
-            <button id="btnGameTopAdAction" class="ml-2 shrink-0 px-2 py-0.5 rounded bg-blue-600 text-white font-outfit font-extrabold text-[9px] active:scale-95">
-                +30 PTS
-            </button>
         </div>
 
         <!-- Zapper Active Alert Banner -->
@@ -665,15 +678,19 @@
             </button>
         </footer>
 
-        <!-- Game Bottom Persistent Companion Ad Slot (Slot B) -->
-        <div id="gameBottomAdSlot" class="w-full theme-card rounded-xl px-2.5 py-1 mt-1.5 flex items-center justify-between text-[10px]">
-            <div class="flex items-center space-x-1.5 truncate">
-                <span class="px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 font-outfit font-black text-[8px]">BOOST</span>
-                <span id="gameBottomAdText" class="font-semibold opacity-80 truncate">Watch short sponsor clip for +1 Free Hint</span>
+        <!-- Game Bottom Persistent Companion Ad Slot (Slot B — Clean Native Frame) -->
+        <div id="gameBottomAdSlot" class="w-full theme-card rounded-xl px-2.5 py-1 mt-1.5 flex items-center justify-between text-[10px] overflow-hidden">
+            <div id="gameSlot2LiveMount" class="flex-1 min-w-0 flex items-center justify-center overflow-hidden">
+                <div class="w-full flex items-center justify-between">
+                    <div class="flex items-center space-x-1.5 truncate">
+                        <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 shrink-0"></span>
+                        <span id="gameBottomAdText" class="font-semibold opacity-85 truncate">Quick Boost Ready • +1 Free Hint</span>
+                    </div>
+                    <button id="btnGameBottomAdAction" class="ml-2 shrink-0 px-2 py-0.5 rounded bg-emerald-600 text-white font-outfit font-extrabold text-[9px] active:scale-95">
+                        +1 HINT
+                    </button>
+                </div>
             </div>
-            <button id="btnGameBottomAdAction" class="ml-2 shrink-0 px-2 py-0.5 rounded bg-emerald-600 text-white font-outfit font-extrabold text-[9px] active:scale-95">
-                +1 HINT
-            </button>
         </div>
     </div>
 
@@ -817,63 +834,84 @@
                 </div>
             </div>
 
-            <!-- Behavior & Level-Based Ad Calculation Weights + Live Simulator -->
-            <div class="p-3.5 rounded-2xl bg-blue-500/10 border border-blue-500/25 space-y-3">
-                <div class="flex items-center justify-between">
-                    <span class="font-outfit font-black text-xs text-blue-600 dark:text-sky-400">🧮 Behavior & Level Ad Calculation Rules</span>
-                    <button id="btnRunAdCalcSim" class="px-2.5 py-1 rounded-lg bg-blue-600 text-white font-outfit font-extrabold text-[10px]">
-                        ▶ TEST SIMULATOR
-                    </button>
+            <!-- Behavior-to-Ad Calculation Weights -->
+            <div class="grid grid-cols-3 gap-2.5 pt-2 border-t border-slate-400/20">
+                <div>
+                    <label class="block text-[9px] font-bold opacity-75 mb-1">Friction Mistakes Trigger</label>
+                    <input id="admInpCalcFriction" type="number" min="1" max="10" value="2" class="w-full px-2.5 py-1.5 rounded-xl bg-slate-500/10 border border-slate-400/30 text-xs font-outfit font-bold">
                 </div>
-                <div class="grid grid-cols-3 gap-2">
-                    <div>
-                        <label class="block text-[9px] font-bold opacity-75 mb-1">Mistake Friction Trigger</label>
-                        <input id="admInpCalcFriction" type="number" min="1" max="10" class="w-full px-2 py-1.5 rounded-xl bg-slate-500/15 border border-slate-400/30 text-xs font-outfit font-bold">
-                    </div>
-                    <div>
-                        <label class="block text-[9px] font-bold opacity-75 mb-1">Low-Points Threshold</label>
-                        <input id="admInpCalcLowPts" type="number" min="10" max="500" class="w-full px-2 py-1.5 rounded-xl bg-slate-500/15 border border-slate-400/30 text-xs font-outfit font-bold">
-                    </div>
-                    <div>
-                        <label class="block text-[9px] font-bold opacity-75 mb-1">High-Level Surge From Lv</label>
-                        <input id="admInpCalcSurgeLvl" type="number" min="2" max="500" class="w-full px-2 py-1.5 rounded-xl bg-slate-500/15 border border-slate-400/30 text-xs font-outfit font-bold">
-                    </div>
+                <div>
+                    <label class="block text-[9px] font-bold opacity-75 mb-1">Low-Points Threshold</label>
+                    <input id="admInpCalcLowPts" type="number" min="10" max="500" value="50" class="w-full px-2.5 py-1.5 rounded-xl bg-slate-500/10 border border-slate-400/30 text-xs font-outfit font-bold">
                 </div>
-                <div class="grid grid-cols-3 gap-2 items-center pt-1 border-t border-blue-500/20 text-[10px]">
-                    <input id="simSampleLvl" type="number" value="14" placeholder="Sample Lv" class="px-2 py-1.5 rounded-lg bg-slate-500/15 border border-slate-400/30 font-outfit font-bold">
-                    <input id="simSampleMistakes" type="number" value="2" placeholder="Mistakes" class="px-2 py-1.5 rounded-lg bg-slate-500/15 border border-slate-400/30 font-outfit font-bold">
-                    <input id="simSamplePts" type="number" value="20" placeholder="Points" class="px-2 py-1.5 rounded-lg bg-slate-500/15 border border-slate-400/30 font-outfit font-bold">
-                </div>
-                <div id="simCalcOutput" class="text-[11px] font-bold text-emerald-600 dark:text-emerald-400">
-                    Simulator Ready — Adjust weights or click Test Simulator to preview calculated ad tier.
+                <div>
+                    <label class="block text-[9px] font-bold opacity-75 mb-1">High-Level Surge Tier</label>
+                    <input id="admInpCalcSurgeLvl" type="number" min="1" max="500" value="10" class="w-full px-2.5 py-1.5 rounded-xl bg-slate-500/10 border border-slate-400/30 text-xs font-outfit font-bold">
                 </div>
             </div>
 
-            <!-- Network IDs & Scripts -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 pt-2 border-t border-slate-400/20">
-                <div>
-                    <label class="block text-[10px] font-bold opacity-75 mb-1">AdMob App ID</label>
-                    <input id="admInpAdmobApp" type="text" class="w-full px-3 py-2 rounded-xl bg-slate-500/10 border border-slate-400/30 text-xs font-mono">
+            <!-- Network IDs & Multi-Slot Adsterra / AdMob Scripts + Live Diagnostics -->
+            <div class="space-y-3 pt-2 border-t border-slate-400/20">
+                <div class="flex items-center justify-between">
+                    <span class="font-outfit font-black text-xs text-emerald-500">🔌 Live Multi-Source Ad Tags & Waterfall Diagnostics</span>
+                    <button id="btnAdmForceRenderSlots" class="px-2.5 py-1 rounded-lg bg-emerald-600 text-white font-outfit font-extrabold text-[10px] active:scale-95">
+                        ⚡ TEST / FORCE RENDER SLOTS
+                    </button>
                 </div>
-                <div>
-                    <label class="block text-[10px] font-bold opacity-75 mb-1">AdMob Banner Unit ID</label>
-                    <input id="admInpAdmobBanner" type="text" class="w-full px-3 py-2 rounded-xl bg-slate-500/10 border border-slate-400/30 text-xs font-mono">
+
+                <!-- Live Slot Diagnostic Status Strip -->
+                <div id="admSlotDiagnostics" class="grid grid-cols-2 sm:grid-cols-4 gap-1.5 text-[10px]">
+                    <div class="p-2 rounded-xl bg-slate-500/10">
+                        <div class="font-bold opacity-70">Slot 1 (Primary)</div>
+                        <div id="diagSlot1" class="font-outfit font-black text-amber-500 truncate">Standby</div>
+                    </div>
+                    <div class="p-2 rounded-xl bg-slate-500/10">
+                        <div class="font-bold opacity-70">Slot 2 (Companion)</div>
+                        <div id="diagSlot2" class="font-outfit font-black text-amber-500 truncate">Standby</div>
+                    </div>
+                    <div class="p-2 rounded-xl bg-slate-500/10">
+                        <div class="font-bold opacity-70">Break / Reward</div>
+                        <div id="diagSlotModal" class="font-outfit font-black text-amber-500 truncate">Standby</div>
+                    </div>
+                    <div class="p-2 rounded-xl bg-slate-500/10">
+                        <div class="font-bold opacity-70">Social / Pop</div>
+                        <div id="diagSlotGlobal" class="font-outfit font-black text-amber-500 truncate">Standby</div>
+                    </div>
                 </div>
-                <div>
-                    <label class="block text-[10px] font-bold opacity-75 mb-1">AdMob Interstitial Unit ID</label>
-                    <input id="admInpAdmobInter" type="text" class="w-full px-3 py-2 rounded-xl bg-slate-500/10 border border-slate-400/30 text-xs font-mono">
-                </div>
-                <div>
-                    <label class="block text-[10px] font-bold opacity-75 mb-1">AdMob Rewarded Unit ID</label>
-                    <input id="admInpAdmobReward" type="text" class="w-full px-3 py-2 rounded-xl bg-slate-500/10 border border-slate-400/30 text-xs font-mono">
-                </div>
-                <div>
-                    <label class="block text-[10px] font-bold opacity-75 mb-1">Adsterra Banner / Social Bar Script</label>
-                    <input id="admInpAdsterraBanner" type="text" placeholder="Banner Key / Script URL" class="w-full px-3 py-2 rounded-xl bg-slate-500/10 border border-slate-400/30 text-xs">
-                </div>
-                <div>
-                    <label class="block text-[10px] font-bold opacity-75 mb-1">Adsterra Direct Smartlink URL</label>
-                    <input id="admInpAdsterraSmartlink" type="text" placeholder="https://www.profitablecpmrate.com/..." class="w-full px-3 py-2 rounded-xl bg-slate-500/10 border border-slate-400/30 text-xs">
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                    <div>
+                        <label class="block text-[10px] font-bold opacity-75 mb-1">AdMob App ID</label>
+                        <input id="admInpAdmobApp" type="text" class="w-full px-3 py-2 rounded-xl bg-slate-500/10 border border-slate-400/30 text-xs font-mono">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold opacity-75 mb-1">AdMob Banner Unit ID</label>
+                        <input id="admInpAdmobBanner" type="text" class="w-full px-3 py-2 rounded-xl bg-slate-500/10 border border-slate-400/30 text-xs font-mono">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold opacity-75 mb-1">AdMob Interstitial Unit ID</label>
+                        <input id="admInpAdmobInter" type="text" class="w-full px-3 py-2 rounded-xl bg-slate-500/10 border border-slate-400/30 text-xs font-mono">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold opacity-75 mb-1">AdMob Rewarded Unit ID</label>
+                        <input id="admInpAdmobReward" type="text" class="w-full px-3 py-2 rounded-xl bg-slate-500/10 border border-slate-400/30 text-xs font-mono">
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label class="block text-[10px] font-bold opacity-75 mb-1">Adsterra Slot 1 Script Tag / Key / Invoke URL (320×50 Primary Banner)</label>
+                        <textarea id="admInpAdsterraBanner" rows="2" placeholder="Paste full Adsterra <script> tag, key, or //www.highperformanceformat.com/.../invoke.js" class="w-full px-3 py-1.5 rounded-xl bg-slate-500/10 border border-slate-400/30 text-[11px] font-mono"></textarea>
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label class="block text-[10px] font-bold opacity-75 mb-1">Adsterra Slot 2 / Native Banner Script Tag or Backup URL</label>
+                        <textarea id="admInpAdsterraBanner2" rows="2" placeholder="Paste secondary Adsterra <script> tag, container snippet, or fallback URL" class="w-full px-3 py-1.5 rounded-xl bg-slate-500/10 border border-slate-400/30 text-[11px] font-mono"></textarea>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold opacity-75 mb-1">Adsterra Social Bar / Popunder Script URL</label>
+                        <input id="admInpAdsterraSocial" type="text" placeholder="//pl...effectivegatecpm.com/...js" class="w-full px-3 py-2 rounded-xl bg-slate-500/10 border border-slate-400/30 text-xs font-mono">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold opacity-75 mb-1">Adsterra Direct Smartlink / Interstitial URL</label>
+                        <input id="admInpAdsterraSmartlink" type="text" placeholder="https://www.profitablecpmrate.com/..." class="w-full px-3 py-2 rounded-xl bg-slate-500/10 border border-slate-400/30 text-xs font-mono">
+                    </div>
                 </div>
             </div>
         </div>
@@ -919,24 +957,24 @@
                 <div class="text-[10px] font-bold opacity-75 mb-1.5">Active Player Tactical Tools (Toggle ON/OFF)</div>
                 <div class="grid grid-cols-2 sm:grid-cols-5 gap-2 text-[10px]">
                     <label class="p-2.5 rounded-xl bg-slate-500/10 flex items-center justify-between cursor-pointer">
-                        <span class="font-bold">💡 Hint</span>
-                        <input id="admChkToolHint" type="checkbox" class="w-4 h-4 accent-emerald-600">
+                        <span class="font-bold">💡 Smart Hint</span>
+                        <input id="admChkToolHint" type="checkbox" class="w-4 h-4 accent-blue-600">
                     </label>
                     <label class="p-2.5 rounded-xl bg-slate-500/10 flex items-center justify-between cursor-pointer">
-                        <span class="font-bold">👁️ X-Ray</span>
-                        <input id="admChkToolXray" type="checkbox" class="w-4 h-4 accent-emerald-600">
+                        <span class="font-bold">👁️ X-Ray Scan</span>
+                        <input id="admChkToolXray" type="checkbox" class="w-4 h-4 accent-blue-600">
                     </label>
                     <label class="p-2.5 rounded-xl bg-slate-500/10 flex items-center justify-between cursor-pointer">
                         <span class="font-bold">💣 Zapper</span>
-                        <input id="admChkToolZapper" type="checkbox" class="w-4 h-4 accent-emerald-600">
+                        <input id="admChkToolZapper" type="checkbox" class="w-4 h-4 accent-blue-600">
                     </label>
                     <label class="p-2.5 rounded-xl bg-slate-500/10 flex items-center justify-between cursor-pointer">
                         <span class="font-bold"># Grid Guide</span>
-                        <input id="admChkToolGrid" type="checkbox" class="w-4 h-4 accent-emerald-600">
+                        <input id="admChkToolGrid" type="checkbox" class="w-4 h-4 accent-blue-600">
                     </label>
                     <label class="p-2.5 rounded-xl bg-slate-500/10 flex items-center justify-between cursor-pointer">
-                        <span class="font-bold">↩️ Undo</span>
-                        <input id="admChkToolUndo" type="checkbox" class="w-4 h-4 accent-emerald-600">
+                        <span class="font-bold">↩️ Undo Move</span>
+                        <input id="admChkToolUndo" type="checkbox" class="w-4 h-4 accent-blue-600">
                     </label>
                 </div>
             </div>
@@ -945,31 +983,31 @@
                 <div class="text-[10px] font-bold opacity-75 mb-1.5">Enabled Game Modes</div>
                 <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-[10px]">
                     <label class="p-2.5 rounded-xl bg-slate-500/10 flex items-center justify-between cursor-pointer">
-                        <span class="font-bold">📅 Daily Challenge</span>
-                        <input id="admChkModeDaily" type="checkbox" class="w-4 h-4 accent-blue-600">
+                        <span class="font-bold">📅 Daily</span>
+                        <input id="admChkModeDaily" type="checkbox" class="w-4 h-4 accent-emerald-600">
                     </label>
                     <label class="p-2.5 rounded-xl bg-slate-500/10 flex items-center justify-between cursor-pointer">
-                        <span class="font-bold">⏱️ Time Rush</span>
-                        <input id="admChkModeRush" type="checkbox" class="w-4 h-4 accent-blue-600">
+                        <span class="font-bold">⏱️ Rush</span>
+                        <input id="admChkModeRush" type="checkbox" class="w-4 h-4 accent-emerald-600">
                     </label>
                     <label class="p-2.5 rounded-xl bg-slate-500/10 flex items-center justify-between cursor-pointer">
-                        <span class="font-bold">🧘 Zen Mode</span>
-                        <input id="admChkModeZen" type="checkbox" class="w-4 h-4 accent-blue-600">
+                        <span class="font-bold">🧘 Zen</span>
+                        <input id="admChkModeZen" type="checkbox" class="w-4 h-4 accent-emerald-600">
                     </label>
                     <label class="p-2.5 rounded-xl bg-slate-500/10 flex items-center justify-between cursor-pointer">
                         <span class="font-bold">🧪 Seed Lab</span>
-                        <input id="admChkModeLab" type="checkbox" class="w-4 h-4 accent-blue-600">
+                        <input id="admChkModeLab" type="checkbox" class="w-4 h-4 accent-emerald-600">
                     </label>
                 </div>
             </div>
         </div>
 
-        <!-- TAB 3: ECONOMY, DAILY CHECK-IN, STORE & UTR APPROVALS -->
+        <!-- TAB 3: POINTS WALLET, DAILY BONUS, REVIVE & POINT STORE MANAGER -->
         <div id="admPaneEconomy" class="hidden theme-card rounded-3xl p-4 sm:p-5 space-y-4 shadow-sm">
             <div class="flex items-center justify-between border-b border-slate-400/20 pb-2.5">
                 <div>
-                    <h3 class="font-outfit font-black text-base text-amber-500">3. Points Wallet, Daily Streak & Store Manager</h3>
-                    <p class="text-[11px] opacity-70">Configure starting points, revive cost, ad payout, daily bonus, store packs & UTR approvals</p>
+                    <h3 class="font-outfit font-black text-base text-amber-500">3. Wallet Economy, Daily Bonus & Point Store</h3>
+                    <p class="text-[11px] opacity-70">Configure welcome points, revive/booster prices, 7-day rewards & UTR top-up packs</p>
                 </div>
                 <button id="btnAdmAddPack" class="px-2.5 py-1.5 rounded-xl bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 font-outfit font-extrabold text-[10px]">
                     + ADD PACK
@@ -978,24 +1016,24 @@
 
             <div class="grid grid-cols-5 gap-2">
                 <div>
-                    <label class="block text-[10px] font-bold opacity-75 mb-1">Start Pts</label>
-                    <input id="admInpWelcomePts" type="number" class="w-full px-2 py-2 rounded-xl bg-slate-500/10 border border-slate-400/30 text-xs font-outfit font-bold">
+                    <label class="block text-[9px] font-bold opacity-75 mb-1">Welcome Pts</label>
+                    <input id="admInpWelcomePts" type="number" class="w-full px-2 py-1.5 rounded-xl bg-slate-500/10 border border-slate-400/30 text-xs font-outfit font-bold">
                 </div>
                 <div>
-                    <label class="block text-[10px] font-bold opacity-75 mb-1">Revive Cost</label>
-                    <input id="admInpReviveCost" type="number" class="w-full px-2 py-2 rounded-xl bg-slate-500/10 border border-slate-400/30 text-xs font-outfit font-bold">
+                    <label class="block text-[9px] font-bold opacity-75 mb-1">Revive Cost</label>
+                    <input id="admInpReviveCost" type="number" class="w-full px-2 py-1.5 rounded-xl bg-slate-500/10 border border-slate-400/30 text-xs font-outfit font-bold">
                 </div>
                 <div>
-                    <label class="block text-[10px] font-bold opacity-75 mb-1">Ad Payout</label>
-                    <input id="admInpAdPayout" type="number" class="w-full px-2 py-2 rounded-xl bg-slate-500/10 border border-slate-400/30 text-xs font-outfit font-bold">
+                    <label class="block text-[9px] font-bold opacity-75 mb-1">Ad Payout</label>
+                    <input id="admInpAdPayout" type="number" class="w-full px-2 py-1.5 rounded-xl bg-slate-500/10 border border-slate-400/30 text-xs font-outfit font-bold">
                 </div>
                 <div>
-                    <label class="block text-[10px] font-bold opacity-75 mb-1">Hint Cost</label>
-                    <input id="admInpHintCost" type="number" class="w-full px-2 py-2 rounded-xl bg-slate-500/10 border border-slate-400/30 text-xs font-outfit font-bold">
+                    <label class="block text-[9px] font-bold opacity-75 mb-1">Hint Cost</label>
+                    <input id="admInpHintCost" type="number" class="w-full px-2 py-1.5 rounded-xl bg-slate-500/10 border border-slate-400/30 text-xs font-outfit font-bold">
                 </div>
                 <div>
-                    <label class="block text-[10px] font-bold opacity-75 mb-1">Zapper Cost</label>
-                    <input id="admInpZapperCost" type="number" class="w-full px-2 py-2 rounded-xl bg-slate-500/10 border border-slate-400/30 text-xs font-outfit font-bold">
+                    <label class="block text-[9px] font-bold opacity-75 mb-1">Zapper Cost</label>
+                    <input id="admInpZapperCost" type="number" class="w-full px-2 py-1.5 rounded-xl bg-slate-500/10 border border-slate-400/30 text-xs font-outfit font-bold">
                 </div>
             </div>
 
@@ -1135,8 +1173,8 @@
 
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 items-center">
                     <div class="sm:col-span-2">
-                        <label class="block text-[9px] font-bold opacity-75 mb-1">Overlay Dismiss Button Label</label>
-                        <input id="admInpOpeningBtnLabel" type="text" value="SKIP / ENTER ✕" class="w-full px-2.5 py-1.5 rounded-xl bg-slate-500/15 border border-slate-400/30 text-xs font-outfit font-bold">
+                        <label class="block text-[9px] font-bold opacity-75 mb-1">Direct Overlay Button Label</label>
+                        <input id="admInpOpeningBtnLabel" type="text" value="SKIP / ENTER ✕" class="w-full px-2.5 py-1.5 rounded-xl bg-slate-500/15 border border-slate-400/30 text-xs font-bold">
                     </div>
                     <label class="p-2 rounded-xl bg-slate-500/15 flex items-center justify-between cursor-pointer mt-3 sm:mt-4">
                         <span class="text-[10px] font-bold">Show Overlay Btn</span>
@@ -1397,27 +1435,30 @@
         </div>
     </div>
 
-    <!-- ==================== MODAL: REWARDED / INTERSTITIAL MANUAL-CLOSE AD VIEWER ==================== -->
+    <!-- ==================== MODAL: REWARDED / INTERSTITIAL MANUAL-CLOSE VIEWER (CLEAN NATIVE PRESENTATION) ==================== -->
     <div id="modalRewardAd" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md">
         <div class="w-full max-w-[380px] theme-card rounded-3xl p-5 shadow-2xl text-center relative">
             <div class="flex items-center justify-between gap-2 text-[10px] font-outfit font-extrabold uppercase tracking-wider mb-3">
-                <span id="adNetworkBadge" class="opacity-70 truncate">SPONSORED • DUAL AD</span>
+                <span id="adNetworkBadge" class="opacity-75 truncate">BONUS REWARD GATE</span>
                 <button id="btnManualCutAd" disabled class="shrink-0 px-3 py-1.5 rounded-full bg-slate-500/25 text-slate-400 disabled:cursor-not-allowed font-outfit font-black text-xs transition flex items-center space-x-1">
                     <span id="adCloseTimerText">Close in 5s...</span>
                 </button>
             </div>
 
-            <div id="adSlotContainer" class="w-full min-h-[175px] rounded-2xl bg-gradient-to-br from-slate-800 to-slate-950 text-white p-4 flex flex-col items-center justify-center border border-slate-700 mb-3">
-                <div class="text-3xl mb-2">🚀</div>
-                <div id="adShowcaseTitle" class="font-outfit font-black text-base">Sponsor Showcase</div>
-                <p id="adShowcaseDesc" class="text-[11px] opacity-75 mt-1">Wait for the close timer to finish, then tap the Close (×) button above to continue.</p>
-                <a id="btnOpenDirectSmartlink" href="https://www.google.com" target="_blank" rel="noopener" class="mt-3 px-4 py-1.5 rounded-full bg-blue-600 text-white font-outfit font-extrabold text-xs">
-                    Visit Sponsor Offer ↗
-                </a>
+            <!-- Live External Ad Iframe / Script Container (Renders real Adsterra/AdMob unit or clean offer frame) -->
+            <div id="adSlotContainer" class="w-full min-h-[210px] rounded-2xl bg-slate-900/95 text-white p-3 flex flex-col items-center justify-center border border-slate-700/80 mb-3 overflow-hidden relative">
+                <div id="modalLiveAdMount" class="w-full min-h-[190px] flex flex-col items-center justify-center">
+                    <div class="text-3xl mb-2">⚡</div>
+                    <div id="adShowcaseTitle" class="font-outfit font-black text-base">Bonus Reward Gate</div>
+                    <p id="adShowcaseDesc" class="text-[11px] opacity-75 mt-1">Complete the quick timer above, then tap Close (×) to collect your reward.</p>
+                    <a id="btnOpenDirectSmartlink" href="https://www.google.com" target="_blank" rel="noopener" class="mt-3 px-4 py-1.5 rounded-full bg-blue-600 text-white font-outfit font-extrabold text-xs">
+                        Explore Featured Offer ↗
+                    </a>
+                </div>
             </div>
 
             <div id="adManualCloseHint" class="text-[11px] font-bold opacity-70">
-                🔒 Close button unlocks when countdown ends (No auto-close)
+                🔒 Close button unlocks when countdown ends
             </div>
         </div>
     </div>
@@ -2314,6 +2355,7 @@
                 admobInterstitialId: 'ca-app-pub-3940256099942544/1033173712',
                 admobRewardedId: 'ca-app-pub-3940256099942544/5224354917',
                 adsterraBannerKey: '',
+                adsterraBanner2Key: '',
                 adsterraSocialBarUrl: '',
                 adsterraPopunderUrl: '',
                 adsterraSmartlinkUrl: 'https://www.profitablecpmrate.com/',
@@ -2324,7 +2366,13 @@
                 rewardedAdPayout: 30,
                 calcFrictionTrigger: 2,
                 calcLowPtsThreshold: 50,
-                calcSurgeLevel: 10
+                calcSurgeLevel: 10,
+                sizes: {
+                    slot1:  { preset: '320x50', w: 320, h: 50 },
+                    slot2:  { preset: '320x50', w: 320, h: 50 },
+                    break:  { preset: '300x250', w: 300, h: 250 },
+                    reward: { preset: '300x250', w: 300, h: 250 }
+                }
             },
             auth: {
                 adminId: 'admin',
@@ -2471,6 +2519,10 @@
             if (b1) b1.innerText = `+${payout} PTS`;
             if (b2) b2.innerText = `+${payout} PTS`;
 
+            if (typeof adManager !== 'undefined' && adManager && typeof adManager.syncLivePersistentSlots === 'function') {
+                adManager.syncLivePersistentSlots();
+            }
+
             const toolMap = {
                 toolHint: g.toolHintEnabled !== false,
                 toolXray: g.toolXrayEnabled !== false,
@@ -2570,13 +2622,202 @@
                 this.sessionAdsShown = 0;
                 this.nextAltThreshold = 2;
                 this.timerId = null;
+                this.slotStatus = {
+                    slot1: 'Standby',
+                    slot2: 'Standby',
+                    modal: 'Standby',
+                    global: 'Standby'
+                };
             }
-            getActiveNetworkLabel() {
+            updateDiagnosticsUI() {
+                const map = {
+                    diagSlot1: this.slotStatus.slot1,
+                    diagSlot2: this.slotStatus.slot2,
+                    diagSlotModal: this.slotStatus.modal,
+                    diagSlotGlobal: this.slotStatus.global
+                };
+                Object.entries(map).forEach(([id, txt]) => {
+                    const el = document.getElementById(id);
+                    if (el) {
+                        el.innerText = txt;
+                        el.className = `font-outfit font-black truncate ${
+                            txt.includes('Active') || txt.includes('Injected') ? 'text-emerald-500' : 'text-amber-500'
+                        }`;
+                    }
+                });
+            }
+            resolveSlotDims(slotKey) {
+                const szMap = (remoteConfig.ads && remoteConfig.ads.sizes) || DEFAULT_REMOTE_CONFIG.ads.sizes;
+                const entry = szMap[slotKey] || { preset: '320x50', w: 320, h: 50 };
+                if (entry.preset === 'responsive') {
+                    const isModal = slotKey === 'break' || slotKey === 'reward';
+                    return { width: isModal ? 320 : 340, height: isModal ? 220 : 64, responsive: true };
+                }
+                if (entry.preset === 'custom') {
+                    return {
+                        width: Math.max(120, Math.min(1200, Number(entry.w) || 320)),
+                        height: Math.max(40, Math.min(800, Number(entry.h) || 50)),
+                        responsive: false
+                    };
+                }
+                const parts = String(entry.preset || '320x50').split('x').map(Number);
+                return { width: parts[0] || 320, height: parts[1] || 50, responsive: false };
+            }
+            // Dynamically executes real Adsterra <script>/atOptions/invoke.js/iframe inside a mobile-safe auto-scaled frame with 2.5s waterfall fallback
+            injectLiveUnitIntoMount(mountId, primaryTag, backupTag, width = 320, height = 50, diagKey = 'slot1', isResponsive = false) {
+                const mount = document.getElementById(mountId);
+                if (!mount) return;
                 const a = remoteConfig.ads;
-                if (a.admobEnabled && a.adsterraEnabled) return 'HYBRID • ADMOB + ADSTERRA';
-                if (a.admobEnabled) return 'GOOGLE ADMOB';
-                if (a.adsterraEnabled) return 'ADSTERRA NETWORK';
-                return 'SPONSOR SHOWCASE';
+
+                // Mobile-Safe Proportional Scaling so wide units (e.g. 728x90) fit 100% inside mobile bounds with zero horizontal overflow
+                const availW = Math.max(240, (mount.parentElement ? mount.parentElement.clientWidth : 340) - 12);
+                const targetW = isResponsive ? availW : width;
+                const scale = (!isResponsive && targetW > availW) ? (availW / targetW) : 1;
+                const scaledH = Math.round(height * scale);
+
+                // 1. Native Android/iOS WebView AdMob Bridge priority if present
+                if (a.admobEnabled && window.AndroidAdBridge && typeof window.AndroidAdBridge.showBanner === 'function') {
+                    try {
+                        window.AndroidAdBridge.showBanner(a.admobBannerId || '');
+                        this.slotStatus[diagKey] = `Active AdMob (${targetW}×${height})`;
+                        this.updateDiagnosticsUI();
+                        return;
+                    } catch (e) {}
+                }
+
+                const rawTag = (primaryTag || '').trim() || (backupTag || '').trim();
+                if (!a.adsterraEnabled || !rawTag) {
+                    mount.style.minHeight = '';
+                    this.slotStatus[diagKey] = `Native (${targetW}×${height})`;
+                    this.updateDiagnosticsUI();
+                    return;
+                }
+
+                // Build an isolated responsive iframe so external Adsterra document.write / atOptions scripts execute cleanly without blocking canvas
+                const buildSrcDoc = (tagInput) => {
+                    let snippet = tagInput;
+                    if (!tagInput.includes('<script') && !tagInput.includes('<iframe')) {
+                        if (/^[a-f0-9]{32}$/i.test(tagInput)) {
+                            snippet = `<script type="text/javascript">atOptions={'key':'${tagInput}','format':'iframe','height':${height},'width':${targetW},'params':{}};<\/script><script type="text/javascript" src="https://www.highperformanceformat.com/${tagInput}/invoke.js"><\/script>`;
+                        } else if (tagInput.endsWith('.js') || tagInput.includes('invoke.js')) {
+                            const cleanSrc = tagInput.startsWith('//') ? 'https:' + tagInput : tagInput;
+                            snippet = `<script type="text/javascript" src="${cleanSrc}"><\/script>`;
+                        } else if (tagInput.startsWith('http')) {
+                            snippet = `<iframe src="${tagInput}" width="${targetW}" height="${height}" frameborder="0" scrolling="no" style="border:0;overflow:hidden;"></iframe>`;
+                        }
+                    }
+                    return `<!DOCTYPE html><html><head><style>html,body{margin:0;padding:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:transparent;overflow:hidden;}</style></head><body>${snippet}</body></html>`;
+                };
+
+                const runInjection = (tagToUse, isBackup) => {
+                    const prevFallback = mount.innerHTML;
+                    const scalerWrap = document.createElement('div');
+                    scalerWrap.style.width = `${Math.round(targetW * scale)}px`;
+                    scalerWrap.style.height = `${scaledH}px`;
+                    scalerWrap.style.maxWidth = '100%';
+                    scalerWrap.style.overflow = 'hidden';
+                    scalerWrap.style.position = 'relative';
+                    scalerWrap.style.margin = '0 auto';
+
+                    const frame = document.createElement('iframe');
+                    frame.style.width = `${targetW}px`;
+                    frame.style.height = `${height}px`;
+                    frame.style.border = '0';
+                    frame.style.overflow = 'hidden';
+                    frame.style.transformOrigin = 'top left';
+                    frame.style.transform = scale < 1 ? `scale(${scale.toFixed(4)})` : 'none';
+                    frame.setAttribute('scrolling', 'no');
+                    frame.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-popups allow-forms allow-top-navigation-by-user-activation');
+                    frame.srcdoc = buildSrcDoc(tagToUse);
+
+                    scalerWrap.appendChild(frame);
+                    mount.innerHTML = '';
+                    mount.appendChild(scalerWrap);
+                    this.slotStatus[diagKey] = isBackup ? `Injected Backup (${targetW}×${height})` : `Injected (${targetW}×${height})`;
+                    this.updateDiagnosticsUI();
+
+                    // 2.5s Waterfall Check: if script blocked or empty, chain to backup tag or restore clean native card
+                    setTimeout(() => {
+                        try {
+                            const doc = frame.contentDocument;
+                            const hasContent = doc && doc.body && (doc.body.querySelector('iframe, img, ins, a, div') !== null);
+                            if (!hasContent) {
+                                if (!isBackup && backupTag && backupTag.trim() && backupTag.trim() !== tagToUse) {
+                                    runInjection(backupTag.trim(), true);
+                                } else {
+                                    mount.innerHTML = prevFallback;
+                                    this.slotStatus[diagKey] = `Fallback (${targetW}×${height})`;
+                                    this.updateDiagnosticsUI();
+                                }
+                            } else {
+                                this.slotStatus[diagKey] = isBackup ? `Active Backup (${targetW}×${height})` : `Active (${targetW}×${height})`;
+                                this.updateDiagnosticsUI();
+                            }
+                        } catch (crossOriginErr) {
+                            // Cross-origin frame loaded external content
+                            this.slotStatus[diagKey] = isBackup ? `Active Backup (${targetW}×${height})` : `Active (${targetW}×${height})`;
+                            this.updateDiagnosticsUI();
+                        }
+                    }, 2500);
+                };
+
+                runInjection(rawTag, false);
+            }
+            injectGlobalSocialBar() {
+                const a = remoteConfig.ads;
+                const url = (a.adsterraSocialBarUrl || '').trim();
+                if (!a.adsterraEnabled || !url) {
+                    this.slotStatus.global = 'Not Configured';
+                    this.updateDiagnosticsUI();
+                    return;
+                }
+                const existing = document.getElementById('adsterraGlobalSocialScript');
+                if (existing && existing.dataset.src === url) return;
+                if (existing) existing.remove();
+
+                const s = document.createElement('script');
+                s.id = 'adsterraGlobalSocialScript';
+                s.type = 'text/javascript';
+                s.async = true;
+                s.src = url.startsWith('//') ? 'https:' + url : url;
+                s.dataset.src = url;
+                s.onload = () => {
+                    this.slotStatus.global = 'Active (Social Script)';
+                    this.updateDiagnosticsUI();
+                };
+                s.onerror = () => {
+                    this.slotStatus.global = 'Blocked / Error';
+                    this.updateDiagnosticsUI();
+                };
+                document.body.appendChild(s);
+            }
+            syncLivePersistentSlots(force = false) {
+                const a = remoteConfig.ads;
+                const count = Number(a.continuousAdSlots ?? 2);
+                const anyNet = !!(a.admobEnabled || a.adsterraEnabled);
+                const passActive = (typeof isAdReliefPassActive === 'function') && isAdReliefPassActive();
+                const effectiveCount = passActive ? Math.min(1, count) : count;
+
+                if (!anyNet || effectiveCount <= 0) {
+                    this.slotStatus.slot1 = 'Off (0 Ads)';
+                    this.slotStatus.slot2 = 'Off (0 Ads)';
+                    this.updateDiagnosticsUI();
+                    return;
+                }
+                if (effectiveCount >= 1 && a.slot1Enabled !== false) {
+                    const d1 = this.resolveSlotDims('slot1');
+                    this.injectLiveUnitIntoMount('slot1LiveMount', a.adsterraBannerKey, a.adsterraBanner2Key, d1.width, d1.height, 'slot1', d1.responsive);
+                    this.injectLiveUnitIntoMount('gameSlot1LiveMount', a.adsterraBannerKey, a.adsterraBanner2Key, d1.width, d1.height, 'slot1', d1.responsive);
+                }
+                if (effectiveCount >= 2 && a.slot2Enabled !== false) {
+                    const d2 = this.resolveSlotDims('slot2');
+                    this.injectLiveUnitIntoMount('slot2LiveMount', a.adsterraBanner2Key, a.adsterraBannerKey, d2.width, d2.height, 'slot2', d2.responsive);
+                    this.injectLiveUnitIntoMount('gameSlot2LiveMount', a.adsterraBanner2Key, a.adsterraBannerKey, d2.width, d2.height, 'slot2', d2.responsive);
+                }
+                this.injectGlobalSocialBar();
+            }
+            getCleanHeaderLabel(context) {
+                return context === 'break' ? 'STAGE TRANSITION • BONUS VAULT' : 'BONUS REWARD GATE';
             }
             canShowAd() {
                 const a = remoteConfig.ads;
@@ -2626,8 +2867,9 @@
                         this.nextAltThreshold = this.nextAltThreshold === 2 ? 3 : 2;
                     }
                     this.openManualCloseAd({
-                        title: 'Milestone Break • Next Labyrinth Ready',
-                        desc: 'Review the sponsor card while your next grid initializes.',
+                        context: 'break',
+                        title: 'Next Labyrinth Ready',
+                        desc: 'Complete the quick countdown above, then tap Close (×) to enter the next stage.',
                         closeSec: Number(a.interstitialCloseSec || 5),
                         onClosed: proceedFn
                     });
@@ -2642,8 +2884,9 @@
                     return;
                 }
                 this.openManualCloseAd({
-                    title: 'Sponsor Reward Active',
-                    desc: 'Wait for the countdown to unlock the Close (×) button, then tap × to claim your reward.',
+                    context: 'reward',
+                    title: 'Bonus Reward Gate',
+                    desc: 'Complete the quick countdown above, then tap Close (×) to collect your reward.',
                     closeSec: Number(a.rewardedCloseSec || 10),
                     onClosed: () => {
                         this.recordTelemetry('adsWatched', 1);
@@ -2653,7 +2896,7 @@
                     }
                 });
             }
-            openManualCloseAd({ title, desc, closeSec, onClosed }) {
+            openManualCloseAd({ context = 'reward', title, desc, closeSec, onClosed }) {
                 clearInterval(this.timerId);
                 this.sessionAdsShown++;
                 telemetryEngine.profile.adImpressions++;
@@ -2663,16 +2906,30 @@
                     try { window.AndroidAdBridge.showRewarded(remoteConfig.ads.admobRewardedId || ''); } catch (e) {}
                 }
 
-                document.getElementById('adNetworkBadge').innerText = this.getActiveNetworkLabel();
-                document.getElementById('adShowcaseTitle').innerText = title;
-                document.getElementById('adShowcaseDesc').innerText = desc;
-
-                const smartBtn = document.getElementById('btnOpenDirectSmartlink');
-                if (remoteConfig.ads.smartlinkEnabled && remoteConfig.ads.adsterraSmartlinkUrl) {
-                    smartBtn.href = remoteConfig.ads.adsterraSmartlinkUrl;
-                    smartBtn.classList.remove('hidden');
-                } else {
-                    smartBtn.classList.add('hidden');
+                document.getElementById('adNetworkBadge').innerText = this.getCleanHeaderLabel(context);
+                const modalMount = document.getElementById('modalLiveAdMount');
+                if (modalMount) {
+                    modalMount.innerHTML = `
+                        <div class="text-3xl mb-2">⚡</div>
+                        <div id="adShowcaseTitle" class="font-outfit font-black text-base">${title}</div>
+                        <p id="adShowcaseDesc" class="text-[11px] opacity-75 mt-1">${desc}</p>
+                        <a id="btnOpenDirectSmartlink" href="${remoteConfig.ads.adsterraSmartlinkUrl || 'https://www.google.com'}" target="_blank" rel="noopener" class="mt-3 px-4 py-1.5 rounded-full bg-blue-600 text-white font-outfit font-extrabold text-xs">
+                            Explore Featured Offer ↗
+                        </a>
+                    `;
+                    const smartBtn = document.getElementById('btnOpenDirectSmartlink');
+                    if (smartBtn) {
+                        smartBtn.href = remoteConfig.ads.adsterraSmartlinkUrl || 'https://www.google.com';
+                        smartBtn.classList.toggle('hidden', !remoteConfig.ads.smartlinkEnabled);
+                    }
+                    // Inject configured Break/Reward dimension unit or smartlink iframe into modal
+                    const modalSlotKey = context === 'break' ? 'break' : 'reward';
+                    const md = this.resolveSlotDims(modalSlotKey);
+                    const modalPrimaryTag = remoteConfig.ads.adsterraBanner2Key || remoteConfig.ads.adsterraBannerKey || '';
+                    const modalBackupTag = remoteConfig.ads.smartlinkEnabled ? remoteConfig.ads.adsterraSmartlinkUrl : '';
+                    if (modalPrimaryTag || modalBackupTag) {
+                        this.injectLiveUnitIntoMount('modalLiveAdMount', modalPrimaryTag, modalBackupTag, md.width, md.height, 'modal', md.responsive);
+                    }
                 }
 
                 const cutBtn = document.getElementById('btnManualCutAd');
@@ -2683,7 +2940,7 @@
                 cutBtn.disabled = true;
                 cutBtn.className = 'shrink-0 px-3 py-1.5 rounded-full bg-slate-500/25 text-slate-400 disabled:cursor-not-allowed font-outfit font-black text-xs transition flex items-center space-x-1';
                 timerTxt.innerText = `Close in ${left}s...`;
-                hintTxt.innerText = '🔒 Close button unlocks when countdown ends (No auto-close)';
+                hintTxt.innerText = '🔒 Close button unlocks when countdown ends';
 
                 openModal('modalRewardAd');
 
@@ -2695,8 +2952,8 @@
                         clearInterval(this.timerId);
                         cutBtn.disabled = false;
                         cutBtn.className = 'shrink-0 px-3.5 py-1.5 rounded-full bg-rose-600 hover:bg-rose-500 text-white cursor-pointer font-outfit font-black text-xs shadow-md active:scale-95 transition flex items-center space-x-1';
-                        timerTxt.innerText = '✕ CLOSE AD';
-                        hintTxt.innerText = '✓ Unlocked! Tap ✕ CLOSE AD above to continue';
+                        timerTxt.innerText = '✕ CLOSE';
+                        hintTxt.innerText = '✓ Unlocked! Tap ✕ CLOSE above to continue';
                     }
                 }, 1000);
 
@@ -4600,10 +4857,28 @@
             document.getElementById('admInpAdmobInter').value = a.admobInterstitialId || '';
             document.getElementById('admInpAdmobReward').value = a.admobRewardedId || '';
             document.getElementById('admInpAdsterraBanner').value = a.adsterraBannerKey || '';
+            document.getElementById('admInpAdsterraBanner2').value = a.adsterraBanner2Key || '';
+            document.getElementById('admInpAdsterraSocial').value = a.adsterraSocialBarUrl || '';
             document.getElementById('admInpAdsterraSmartlink').value = a.adsterraSmartlinkUrl || '';
 
-            document.getElementById('admSelDefaultDiff').value = g.defaultDifficulty || 'normal';
-            document.getElementById('admSelStartingHearts').value = String(g.startingHearts || 3);
+            const sz = a.sizes || DEFAULT_REMOTE_CONFIG.ads.sizes;
+            const bindSizeField = (slotKey, selId, wrapId, wId, hId) => {
+                const entry = sz[slotKey] || { preset: '320x50', w: 320, h: 50 };
+                const sel = document.getElementById(selId);
+                const wrap = document.getElementById(wrapId);
+                const wInp = document.getElementById(wId);
+                const hInp = document.getElementById(hId);
+                if (sel) sel.value = entry.preset || '320x50';
+                if (wInp) wInp.value = entry.w || 320;
+                if (hInp) hInp.value = entry.h || 50;
+                if (wrap) wrap.classList.toggle('hidden', entry.preset !== 'custom');
+            };
+            bindSizeField('slot1', 'admSelSizeSlot1', 'admCustomWrapSlot1', 'admCustWSlot1', 'admCustHSlot1');
+            bindSizeField('slot2', 'admSelSizeSlot2', 'admCustomWrapSlot2', 'admCustWSlot2', 'admCustHSlot2');
+            bindSizeField('break', 'admSelSizeBreak', 'admCustomWrapBreak', 'admCustWBreak', 'admCustHBreak');
+            bindSizeField('reward', 'admSelSizeReward', 'admCustomWrapReward', 'admCustWReward', 'admCustHReward');
+            updateAdminSizePreviewBadge();
+            adManager.updateDiagnosticsUI();
             document.getElementById('admSelPressureBias').value = String(o.pressureBias || 0);
             document.getElementById('admChkToolHint').checked = g.toolHintEnabled !== false;
             document.getElementById('admChkToolXray').checked = g.toolXrayEnabled !== false;
@@ -4809,16 +5084,63 @@
             showToast('⚡ Google AdMob Test IDs filled');
         };
 
-        document.getElementById('btnRunAdCalcSim').onclick = () => {
-            const sample = {
-                lvl: Number(document.getElementById('simSampleLvl').value) || 1,
-                mistakes: Number(document.getElementById('simSampleMistakes').value) || 0,
-                pts: Number(document.getElementById('simSamplePts').value) || 100,
-                diff: state.difficulty
-            };
-            const res = adManager.calculateAdDecision(sample);
-            document.getElementById('simCalcOutput').innerText = `Result: [${res.tier}] — ${res.reason}`;
+        document.getElementById('btnAdmForceRenderSlots').onclick = () => {
+            remoteConfig.ads.admobEnabled = document.getElementById('admChkAdmob').checked;
+            remoteConfig.ads.adsterraEnabled = document.getElementById('admChkAdsterra').checked;
+            remoteConfig.ads.continuousAdSlots = Number(document.getElementById('admSelContinuousSlots').value);
+            remoteConfig.ads.slot1Enabled = document.getElementById('admChkSlot1').checked;
+            remoteConfig.ads.slot2Enabled = document.getElementById('admChkSlot2').checked;
+            remoteConfig.ads.adsterraBannerKey = document.getElementById('admInpAdsterraBanner').value.trim();
+            remoteConfig.ads.adsterraBanner2Key = document.getElementById('admInpAdsterraBanner2').value.trim();
+            remoteConfig.ads.adsterraSocialBarUrl = document.getElementById('admInpAdsterraSocial').value.trim();
+            remoteConfig.ads.adsterraSmartlinkUrl = document.getElementById('admInpAdsterraSmartlink').value.trim();
+            remoteConfig.ads.sizes = readAdminSizesFromForm();
+            adManager.syncLivePersistentSlots(true);
+            showToast('⚡ Live slots injected with configured dimensions!');
         };
+
+        function readAdminSizesFromForm() {
+            const readOne = (selId, wId, hId) => {
+                const preset = document.getElementById(selId).value;
+                if (preset === 'custom') {
+                    return {
+                        preset: 'custom',
+                        w: Math.max(120, Math.min(1200, Number(document.getElementById(wId).value) || 320)),
+                        h: Math.max(40, Math.min(800, Number(document.getElementById(hId).value) || 50))
+                    };
+                }
+                if (preset === 'responsive') return { preset: 'responsive', w: 320, h: 64 };
+                const [w, h] = preset.split('x').map(Number);
+                return { preset, w: w || 320, h: h || 50 };
+            };
+            return {
+                slot1: readOne('admSelSizeSlot1', 'admCustWSlot1', 'admCustHSlot1'),
+                slot2: readOne('admSelSizeSlot2', 'admCustWSlot2', 'admCustHSlot2'),
+                break: readOne('admSelSizeBreak', 'admCustWBreak', 'admCustHBreak'),
+                reward: readOne('admSelSizeReward', 'admCustWReward', 'admCustHReward')
+            };
+        }
+
+        function updateAdminSizePreviewBadge() {
+            const s = readAdminSizesFromForm();
+            const fmt = (obj) => obj.preset === 'responsive' ? 'Auto-Fit' : `${obj.w}×${obj.h}`;
+            const badge = document.getElementById('admSizePreviewBadge');
+            if (badge) badge.innerText = `S1: ${fmt(s.slot1)} • S2: ${fmt(s.slot2)} • Modal: ${fmt(s.break)}`;
+        }
+
+        document.querySelectorAll('.adm-size-sel').forEach(sel => {
+            sel.addEventListener('change', () => {
+                document.getElementById('admCustomWrapSlot1').classList.toggle('hidden', document.getElementById('admSelSizeSlot1').value !== 'custom');
+                document.getElementById('admCustomWrapSlot2').classList.toggle('hidden', document.getElementById('admSelSizeSlot2').value !== 'custom');
+                document.getElementById('admCustomWrapBreak').classList.toggle('hidden', document.getElementById('admSelSizeBreak').value !== 'custom');
+                document.getElementById('admCustomWrapReward').classList.toggle('hidden', document.getElementById('admSelSizeReward').value !== 'custom');
+                updateAdminSizePreviewBadge();
+            });
+        });
+        ['admCustWSlot1','admCustHSlot1','admCustWSlot2','admCustHSlot2','admCustWBreak','admCustHBreak','admCustWReward','admCustHReward'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.addEventListener('input', updateAdminSizePreviewBadge);
+        });
 
         document.getElementById('btnAdmAddPack').onclick = () => {
             remoteConfig.economy.packages.push({ id: 'pack_' + Date.now(), name: 'Special Bundle', points: 500, priceInr: 79, tag: 'NEW', active: true });
@@ -4865,7 +5187,10 @@
             remoteConfig.ads.admobInterstitialId = document.getElementById('admInpAdmobInter').value.trim();
             remoteConfig.ads.admobRewardedId = document.getElementById('admInpAdmobReward').value.trim();
             remoteConfig.ads.adsterraBannerKey = document.getElementById('admInpAdsterraBanner').value.trim();
+            remoteConfig.ads.adsterraBanner2Key = document.getElementById('admInpAdsterraBanner2').value.trim();
+            remoteConfig.ads.adsterraSocialBarUrl = document.getElementById('admInpAdsterraSocial').value.trim();
             remoteConfig.ads.adsterraSmartlinkUrl = document.getElementById('admInpAdsterraSmartlink').value.trim();
+            remoteConfig.ads.sizes = readAdminSizesFromForm();
 
             remoteConfig.gameplay.defaultDifficulty = document.getElementById('admSelDefaultDiff').value;
             remoteConfig.gameplay.startingHearts = Number(document.getElementById('admSelStartingHearts').value) || 3;
